@@ -1,0 +1,7 @@
+<input (keyup)="searchRepositories($event)">
+
+<div *ngIf="repositoryList.length > 0">
+    <ul>
+        <li *ngFor="let repository of repositoryList">{{repository.name}}</li>
+    </ul>
+</div>
