@@ -17,6 +17,8 @@ export class RepositoryComponent implements OnInit, OnDestroy {
 
   repSearchSub: Subscription;
 
+  selectedRepository: Repository;
+
   constructor(private store: Store<fromRepository.State>) { }
 
   ngOnInit(): void {
@@ -32,8 +34,10 @@ export class RepositoryComponent implements OnInit, OnDestroy {
   searchRepositories(event){
     const quearyString = event.target.value;
     this.store.dispatch(new repositoryActions.FindRepositoryAction(quearyString));
+  }
 
-
+  onRepositorySelected(repo){
+    this.selectedRepository = repo;
   }
 
 }

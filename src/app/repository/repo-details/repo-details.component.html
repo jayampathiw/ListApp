@@ -1,0 +1,9 @@
+<!--  -->
+
+<div *ngIf="selectedRepository != null">
+    <p>{{selectedRepository.name}}</p>
+    <p>{{selectedRepository.description}}</p>
+    <p>{{selectedRepository.full_name}}</p>
+    <p>{{selectedRepository.created_at | date}}</p>
+    <p>{{selectedRepository.updated_at | date}}</p>
+</div>

@@ -11,11 +11,12 @@ import { reducer } from './states/repository.reducer';
 import { RepositoryService } from './services/repository.service';
 import { EffectsModule } from '@ngrx/effects';
 import { RepositoryEffect } from './states/repository.effects';
+import { RepoDetailsComponent } from './repo-details/repo-details.component';
 
 
 
 @NgModule({
-  declarations: [RepositoryComponent],
+  declarations: [RepositoryComponent, RepoDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(RepositoryRoutes),
