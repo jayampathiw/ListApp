@@ -13,6 +13,9 @@ Sample application developed to view repository details.
   - Navigate to http://localhost:4200/ from your browser window.
   - You can use any user name or password to log in.
   - In the landing page, you will find the repository search text field.
+  ![image info](./images/search_field.PNG)
   - Enter the search text you want to search.
   - All the results will be displayed on the page.
+  ![image info](./images/results.PNG)
   - Clicking on a result page you can see the repository details next to the selected repository. 
+  ![image info](./images/repo_details.PNG)
