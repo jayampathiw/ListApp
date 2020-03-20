@@ -1,9 +1,11 @@
-<!--  -->
-
 <div *ngIf="selectedRepository != null">
-    <p>{{selectedRepository.name}}</p>
-    <p>{{selectedRepository.description}}</p>
-    <p>{{selectedRepository.full_name}}</p>
-    <p>{{selectedRepository.created_at | date}}</p>
-    <p>{{selectedRepository.updated_at | date}}</p>
+    <p><strong>Name:</strong> {{selectedRepository.name}}</p>
+    <p><strong>Number of Stars:</strong>  </p>
+    <p><strong>Description:</strong>  {{selectedRepository.description}}</p>
+    <p><strong>Full Name:</strong>  {{selectedRepository.full_name}}</p>
+    <p><strong>Created Date:</strong>  {{selectedRepository.created_at | date}}</p>
+    <p><strong>updated Date:</strong>  {{selectedRepository.updated_at | date}}</p>
+    <br>
+    <button (click)="goToRepo()">Go to Repo</button>
 </div>
+

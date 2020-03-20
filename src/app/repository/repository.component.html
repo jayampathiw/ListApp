@@ -1,12 +1,23 @@
-<input (keyup)="searchRepositories($event)">
-
-<div *ngIf="repository$ | async as repositories">
-    <ul>
-        <li *ngFor="let repository of repositories" 
-            (click)="onRepositorySelected(repository)">
-            {{repository.name}}
-        </li>
-    </ul>
+<h2>Repository Details</h2>
+<div class="row">
+    <div class="column">
+        <div class="search">
+            <input (keyup)="searchRepositories($event)">
+        </div>
+    </div>
 </div>
 
-<app-repo-details [selectedRepository]="selectedRepository"></app-repo-details>
+<div class="row">
+    <div class="column">
+        <div *ngIf="repository$ | async as repositories" class="content_panel">
+            <ul>
+                <li *ngFor="let repository of repositories" (click)="onRepositorySelected(repository)">
+                    {{repository.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="column">
+        <app-repo-details [selectedRepository]="selectedRepository"></app-repo-details>
+    </div>
+</div>

@@ -15,4 +15,8 @@ export class RepoDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToRepo(){
+    window.open(this.selectedRepository.url, "_blank");
+  }
+
 }

@@ -9,15 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { RepositoryModule } from './repository/repository.module';
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogInComponent,
-    DashboardComponent
+    LogInComponent
   ],
   imports: [
     BrowserModule,
