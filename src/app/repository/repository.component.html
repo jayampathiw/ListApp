@@ -1,8 +1,11 @@
 <input (keyup)="searchRepositories($event)">
 
-<div *ngIf="repositoryList.length > 0">
+<div *ngIf="repository$ | async as repositories">
     <ul>
-        <li *ngFor="let repository of repositoryList" (click)="onRepositorySelected(repository)">{{repository.name}}</li>
+        <li *ngFor="let repository of repositories" 
+            (click)="onRepositorySelected(repository)">
+            {{repository.name}}
+        </li>
     </ul>
 </div>
 
